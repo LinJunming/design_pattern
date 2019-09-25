@@ -146,6 +146,11 @@
     <ClCompile Include="factory\network_product\network_product.cpp" />
     <ClCompile Include="factory\range_extender\range_extender.cpp" />
     <ClCompile Include="factory\wireless_router\wireless_router.cpp" />
+    <ClCompile Include="factory_method\network_product\network_product.cpp" />
+    <ClCompile Include="factory_method\range_extender\range_extender.cpp" />
+    <ClCompile Include="factory_method\range_extender_factory.cpp" />
+    <ClCompile Include="factory_method\wireless_router\wireless_router.cpp" />
+    <ClCompile Include="factory_method\wireless_router_factory.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +159,13 @@
     <ClInclude Include="factory\product_info.h" />
     <ClInclude Include="factory\range_extender\range_extender.h" />
     <ClInclude Include="factory\wireless_router\wireless_router.h" />
+    <ClInclude Include="factory_method\factory_method.h" />
+    <ClInclude Include="factory_method\network_product\network_product.h" />
+    <ClInclude Include="factory_method\product_info.h" />
+    <ClInclude Include="factory_method\range_extender\range_extender.h" />
+    <ClInclude Include="factory_method\range_extender_factory.h" />
+    <ClInclude Include="factory_method\wireless_router\wireless_router.h" />
+    <ClInclude Include="factory_method\wireless_router_factory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

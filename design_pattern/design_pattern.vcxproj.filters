@@ -17,6 +17,18 @@
     <Filter Include="源文件\factory\wireless_router">
       <UniqueIdentifier>{dfc46998-d839-4666-b4f3-93db59f5b2ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\factory_method">
+      <UniqueIdentifier>{014fd3c4-3fe1-4da5-b59d-3d31f35ab334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\factory_method\network_product">
+      <UniqueIdentifier>{0829f057-38b8-4299-8ead-321033af22cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\factory_method\range_extender">
+      <UniqueIdentifier>{d72bb4b3-c26f-4d26-a62f-df91284895c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\factory_method\wireless_router">
+      <UniqueIdentifier>{3399e9f8-60fb-4fc3-aa9d-ec1287eacd3c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -34,6 +46,21 @@
     <ClCompile Include="factory\wireless_router\wireless_router.cpp">
       <Filter>源文件\factory\wireless_router</Filter>
     </ClCompile>
+    <ClCompile Include="factory_method\network_product\network_product.cpp">
+      <Filter>源文件\factory_method\network_product</Filter>
+    </ClCompile>
+    <ClCompile Include="factory_method\wireless_router\wireless_router.cpp">
+      <Filter>源文件\factory_method\wireless_router</Filter>
+    </ClCompile>
+    <ClCompile Include="factory_method\range_extender\range_extender.cpp">
+      <Filter>源文件\factory_method\range_extender</Filter>
+    </ClCompile>
+    <ClCompile Include="factory_method\range_extender_factory.cpp">
+      <Filter>源文件\factory_method</Filter>
+    </ClCompile>
+    <ClCompile Include="factory_method\wireless_router_factory.cpp">
+      <Filter>源文件\factory_method</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="factory\factory.h">
@@ -50,6 +77,27 @@
     </ClInclude>
     <ClInclude Include="factory\wireless_router\wireless_router.h">
       <Filter>源文件\factory\wireless_router</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\network_product\network_product.h">
+      <Filter>源文件\factory_method\network_product</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\wireless_router\wireless_router.h">
+      <Filter>源文件\factory_method\wireless_router</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\range_extender\range_extender.h">
+      <Filter>源文件\factory_method\range_extender</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\factory_method.h">
+      <Filter>源文件\factory_method</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\product_info.h">
+      <Filter>源文件\factory_method</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\range_extender_factory.h">
+      <Filter>源文件\factory_method</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_method\wireless_router_factory.h">
+      <Filter>源文件\factory_method</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
