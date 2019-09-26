@@ -5,6 +5,7 @@
 #include "factory_method/wireless_router_factory.h"
 #endif
 #include "strategy/emotion.h"
+#include "strategy/show.h"
 
 
 #ifdef TEST_SIMPLE_FACTORY
@@ -57,6 +58,7 @@ void TestFactoryMethod()
 
 void TestStrategy()
 {
+	// 基于继承实现
 	Robot* happy_robot = new Robot(new Happy());
 	Robot* sad_robot = new Robot(new Sad());
 	Poet* happy_poet = new Poet(EMOTION_HAPPY);
@@ -64,12 +66,18 @@ void TestStrategy()
 	Person<Happy> *happy_person = new Person<Happy>;
 	Person<Sad> *sad_person = new Person<Sad>;
 
+	// 基于函数指针实现
+	Boy* boy = new Boy(NormalShow);
+	Girl* girl = new Girl(AbnormalShow);
+
 	happy_robot->Say();
 	sad_robot->Say();
 	happy_poet->Say();
 	sad_poet->Say();
 	happy_person->Say();
 	sad_person->Say();
+	boy->Show();
+	girl->Show();
 
 	getchar();
 
@@ -79,6 +87,8 @@ void TestStrategy()
 	delete sad_poet;
 	delete happy_person;
 	delete sad_person;
+	delete boy;
+	delete girl;
 }
 
 int main()
