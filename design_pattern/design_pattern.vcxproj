@@ -167,6 +167,7 @@
     <ClInclude Include="factory_method\wireless_router\wireless_router.h" />
     <ClInclude Include="factory_method\wireless_router_factory.h" />
     <ClInclude Include="strategy\emotion.h" />
+    <ClInclude Include="strategy\show.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

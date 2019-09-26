@@ -105,6 +105,9 @@
     <ClInclude Include="strategy\emotion.h">
       <Filter>源文件\stategy</Filter>
     </ClInclude>
+    <ClInclude Include="strategy\show.h">
+      <Filter>源文件\stategy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
