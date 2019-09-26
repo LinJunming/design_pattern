@@ -29,6 +29,9 @@
     <Filter Include="源文件\factory_method\wireless_router">
       <UniqueIdentifier>{3399e9f8-60fb-4fc3-aa9d-ec1287eacd3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\stategy">
+      <UniqueIdentifier>{ae64f350-5c27-4444-a365-96e5df747e67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -99,5 +102,13 @@
     <ClInclude Include="factory_method\wireless_router_factory.h">
       <Filter>源文件\factory_method</Filter>
     </ClInclude>
+    <ClInclude Include="strategy\emotion.h">
+      <Filter>源文件\stategy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
