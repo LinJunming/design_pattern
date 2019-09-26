@@ -4,6 +4,8 @@
 #include "factory_method/range_extender_factory.h"
 #include "factory_method/wireless_router_factory.h"
 #endif
+#include "strategy/emotion.h"
+
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -21,6 +23,9 @@ void TestFactory()
 	}
 	// pause
 	getchar();
+	delete factory;
+	delete range_extender;
+	delete wireless_router;
 }
 #else
 void TestFactoryMethod()
@@ -42,8 +47,40 @@ void TestFactoryMethod()
 	}
 	// pause
 	getchar();
+
+	delete range_extender_factory;
+	delete wireless_router_factory;
+	delete range_extender;
+	delete wireless_router;
 }
 #endif
+
+void TestStrategy()
+{
+	Robot* happy_robot = new Robot(new Happy());
+	Robot* sad_robot = new Robot(new Sad());
+	Poet* happy_poet = new Poet(EMOTION_HAPPY);
+	Poet* sad_poet = new Poet(EMOTION_SAD);
+	Person<Happy> *happy_person = new Person<Happy>;
+	Person<Sad> *sad_person = new Person<Sad>;
+
+	happy_robot->Say();
+	sad_robot->Say();
+	happy_poet->Say();
+	sad_poet->Say();
+	happy_person->Say();
+	sad_person->Say();
+
+	getchar();
+
+	delete happy_robot;
+	delete sad_robot;
+	delete happy_poet;
+	delete sad_poet;
+	delete happy_person;
+	delete sad_person;
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -51,5 +88,6 @@ int main()
 #else
 	TestFactoryMethod();
 #endif
+	TestStrategy();
 	return 0;
 }
