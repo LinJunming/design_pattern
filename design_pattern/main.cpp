@@ -11,7 +11,7 @@
 #include "singleton/singleton.h"
 #include "protype/protype.h"
 #include "template/my_template.h"
-
+#include "builder/builder.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -161,6 +161,24 @@ void TestTemplate() {
 	getchar();
 }
 
+void TestBuilder() {
+	PhoneBuilder *mi_buidler = (PhoneBuilder*)new XiaoMiPhoneBuilder();
+	Director *director = new Director(mi_buidler);
+	director->Construct();
+	mi_buidler->GetPhone()->CheckInfo();
+	delete director;
+	delete mi_buidler;
+
+	PhoneBuilder *hw_buidler = (PhoneBuilder*)new HuaweiPhoneBuilder();
+	director = new Director(hw_buidler);
+	director->Construct();
+	hw_buidler->GetPhone()->CheckInfo();
+	delete director;
+	delete hw_buidler;
+	getchar();
+
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -173,5 +191,6 @@ int main()
 	TestSingleton();
 	TestRocket();
 	TestTemplate();
+	TestBuilder();
 	return 0;
 }
