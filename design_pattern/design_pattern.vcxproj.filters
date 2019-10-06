@@ -38,6 +38,9 @@
     <Filter Include="源文件\singleton">
       <UniqueIdentifier>{d441f15a-157f-4312-8a16-15601374925b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\protype">
+      <UniqueIdentifier>{39215e3c-83d2-4ff6-b5f8-a3840dd5b18b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -122,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="singleton\singleton.h">
       <Filter>源文件\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="protype\protype.h">
+      <Filter>源文件\protype</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
