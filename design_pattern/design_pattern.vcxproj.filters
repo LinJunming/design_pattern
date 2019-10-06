@@ -32,6 +32,12 @@
     <Filter Include="源文件\stategy">
       <UniqueIdentifier>{ae64f350-5c27-4444-a365-96e5df747e67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\adapter">
+      <UniqueIdentifier>{13b14e12-c994-4a4c-9c34-9fde0058ec3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\singleton">
+      <UniqueIdentifier>{d441f15a-157f-4312-8a16-15601374925b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -107,6 +113,15 @@
     </ClInclude>
     <ClInclude Include="strategy\show.h">
       <Filter>源文件\stategy</Filter>
+    </ClInclude>
+    <ClInclude Include="adapter\stack.h">
+      <Filter>源文件\adapter</Filter>
+    </ClInclude>
+    <ClInclude Include="adapter\queue.h">
+      <Filter>源文件\adapter</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton\singleton.h">
+      <Filter>源文件\singleton</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
