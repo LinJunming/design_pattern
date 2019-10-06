@@ -41,6 +41,9 @@
     <Filter Include="源文件\protype">
       <UniqueIdentifier>{39215e3c-83d2-4ff6-b5f8-a3840dd5b18b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\template">
+      <UniqueIdentifier>{d894a0a0-8a12-43bd-ab31-dbcdb0a05138}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -128,6 +131,9 @@
     </ClInclude>
     <ClInclude Include="protype\protype.h">
       <Filter>源文件\protype</Filter>
+    </ClInclude>
+    <ClInclude Include="template\my_template.h">
+      <Filter>源文件\template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -172,6 +172,7 @@
     <ClInclude Include="singleton\singleton.h" />
     <ClInclude Include="strategy\emotion.h" />
     <ClInclude Include="strategy\show.h" />
+    <ClInclude Include="template\my_template.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
