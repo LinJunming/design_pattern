@@ -10,6 +10,7 @@
 #include "adapter/queue.h"
 #include "singleton/singleton.h"
 #include "protype/protype.h"
+#include "template/my_template.h"
 
 
 #ifdef TEST_SIMPLE_FACTORY
@@ -149,6 +150,15 @@ void TestRocket()
 	getchar();
 }
 
+void TestTemplate() {
+	MedicineInstructionBook medicine_instruction_book;
+	medicine_instruction_book.IntroduceFunction();
+
+	ToyInstructionBook toy_instruction_book;
+	toy_instruction_book.IntroduceFunction();
+	getchar();
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -160,5 +170,6 @@ int main()
 	TestAdapter();
 	TestSingleton();
 	TestRocket();
+	TestTemplate();
 	return 0;
 }
