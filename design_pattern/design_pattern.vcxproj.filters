@@ -44,6 +44,9 @@
     <Filter Include="源文件\template">
       <UniqueIdentifier>{d894a0a0-8a12-43bd-ab31-dbcdb0a05138}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\builder">
+      <UniqueIdentifier>{7d83601e-d27d-4a37-a773-d13fc440c84e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -134,6 +137,9 @@
     </ClInclude>
     <ClInclude Include="template\my_template.h">
       <Filter>源文件\template</Filter>
+    </ClInclude>
+    <ClInclude Include="builder\builder.h">
+      <Filter>源文件\builder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

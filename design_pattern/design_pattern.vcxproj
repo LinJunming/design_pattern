@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="adapter\queue.h" />
     <ClInclude Include="adapter\stack.h" />
+    <ClInclude Include="builder\builder.h" />
     <ClInclude Include="factory\factory.h" />
     <ClInclude Include="factory\network_product\network_product.h" />
     <ClInclude Include="factory\product_info.h" />
