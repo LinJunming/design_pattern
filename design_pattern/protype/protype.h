@@ -5,8 +5,8 @@
 // 原型模式的父类
 class Protype {
 public:
-	virtual Protype* clone();// 一定要实现克隆函数
-	virtual void show();
+	virtual Protype* clone() = 0;// 一定要实现克隆函数
+	virtual void show() = 0;
 };
 
 class Rocket {
