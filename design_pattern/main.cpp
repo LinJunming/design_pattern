@@ -9,6 +9,7 @@
 #include "adapter/stack.h"
 #include "adapter/queue.h"
 #include "singleton/singleton.h"
+#include "protype/protype.h"
 
 
 #ifdef TEST_SIMPLE_FACTORY
@@ -136,6 +137,18 @@ void TestSingleton()
 	getchar();
 }
 
+void TestRocket()
+{
+	// “辛辛苦苦传入一堆参数，造一支火箭...”
+	Rocket* rocket = new Rocket(350,180000,-1,500000,false,109273981672465,"NASA","USA");
+	rocket->Show();
+
+	// “直接就被克隆了,没办法，谁叫这支火箭自带克隆函数呢。”
+	Rocket *clone_rocket = (Rocket *)rocket->Clone("RUSSIA");
+	clone_rocket->Show();
+	getchar();
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -146,5 +159,6 @@ int main()
 	TestStrategy();
 	TestAdapter();
 	TestSingleton();
+	TestRocket();
 	return 0;
 }
