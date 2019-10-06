@@ -8,6 +8,7 @@
 #include "strategy/show.h"
 #include "adapter/stack.h"
 #include "adapter/queue.h"
+#include "singleton/singleton.h"
 
 
 #ifdef TEST_SIMPLE_FACTORY
@@ -124,6 +125,16 @@ void TestAdapter()
 
 }
 
+void TestSingleton()
+{
+	Singleton *singleton_a = Singleton::GetInstance();
+	singleton_a->hello();
+
+	SingletonT *singleton_b = SingletonT::GetInstance();
+	singleton_b->hello();
+
+	getchar();
+}
 
 int main()
 {
@@ -134,5 +145,6 @@ int main()
 #endif
 	TestStrategy();
 	TestAdapter();
+	TestSingleton();
 	return 0;
 }
