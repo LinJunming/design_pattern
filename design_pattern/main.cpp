@@ -124,7 +124,9 @@ void TestAdapter()
 	q->PopFront();
 	std::cout << "Expected 0: " << q->Size() << std::endl;
 	getchar();
-
+	
+	delete s;
+	delete q;
 }
 
 void TestSingleton()
