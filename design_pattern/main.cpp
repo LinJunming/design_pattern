@@ -6,6 +6,8 @@
 #endif
 #include "strategy/emotion.h"
 #include "strategy/show.h"
+#include "adapter/stack.h"
+#include "adapter/queue.h"
 
 
 #ifdef TEST_SIMPLE_FACTORY
@@ -91,6 +93,38 @@ void TestStrategy()
 	delete girl;
 }
 
+
+void TestAdapter()
+{
+	Stack<int> *s = new Stack<int>;
+	s->Push(1);
+	s->Push(2);
+	std::cout << "Expected 2: " << s->Top() << std::endl;
+	s->Pop();
+	s->Push(4);
+	std::cout << "Expected 4: " << s->Top() << std::endl;
+	s->Pop();
+	std::cout << "Expected 1: " << s->Top() << std::endl;
+	s->Pop();
+	std::cout << "Expected 0: " << s->Size() << std::endl;
+	getchar();
+
+	Queue<int> *q = new Queue<int>;
+	q->PushBack(1);
+	q->PushBack(2);
+	std::cout << "Expected 1: " << q->Front() << std::endl;
+	q->PopFront();
+	q->PushBack(4);
+	std::cout << "Expected 2: " << q->Front() << std::endl;
+	q->PopFront();
+	std::cout << "Expected 4: " << q->Front() << std::endl;
+	q->PopFront();
+	std::cout << "Expected 0: " << q->Size() << std::endl;
+	getchar();
+
+}
+
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -99,5 +133,6 @@ int main()
 	TestFactoryMethod();
 #endif
 	TestStrategy();
+	TestAdapter();
 	return 0;
 }
