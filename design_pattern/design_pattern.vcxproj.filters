@@ -47,6 +47,9 @@
     <Filter Include="源文件\builder">
       <UniqueIdentifier>{7d83601e-d27d-4a37-a773-d13fc440c84e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\appearance">
+      <UniqueIdentifier>{eda2ad8f-771a-4c54-9a25-a3c91838686e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -140,6 +143,9 @@
     </ClInclude>
     <ClInclude Include="builder\builder.h">
       <Filter>源文件\builder</Filter>
+    </ClInclude>
+    <ClInclude Include="appearence\appearance.h">
+      <Filter>源文件\appearance</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
