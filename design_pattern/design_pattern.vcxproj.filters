@@ -53,6 +53,9 @@
     <Filter Include="源文件\composite">
       <UniqueIdentifier>{6f2723ee-da82-4a58-a6c4-88c84e7f39ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\proxy">
+      <UniqueIdentifier>{61098514-428e-4913-9038-972b0314759d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -152,6 +155,9 @@
     </ClInclude>
     <ClInclude Include="composite\composite.h">
       <Filter>源文件\composite</Filter>
+    </ClInclude>
+    <ClInclude Include="proxy\proxy.h">
+      <Filter>源文件\proxy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
