@@ -13,6 +13,7 @@
 #include "template/my_template.h"
 #include "builder/builder.h"
 #include "appearence/appearance.h"
+#include "composite/composite.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -186,6 +187,37 @@ void TestAppearance() {
 	getchar();
 }
 
+void TestComposite() {
+	std::cout << "-------------- Testing Composite Pattern --------------" << std::endl;
+	Leader* boss = new Leader("Boss");
+
+	Leader* manager_A = new Leader("Manager A");
+	Worker* worker_a_1 = new Worker("Worker a-1");
+	Worker* worker_a_2 = new Worker("Worker a-2");
+	manager_A->Add((Relation*)worker_a_1);
+	manager_A->Add((Relation*)worker_a_2);
+
+	Leader* manager_B = new Leader("Manager B");
+	Worker* worker_b_1 = new Worker("Worker b-1");
+	Worker* worker_b_2 = new Worker("Worker b-2");
+	manager_B->Add((Relation*)worker_b_1);
+	manager_B->Add((Relation*)worker_b_2);
+
+	boss->Add(manager_A);
+	boss->Add(manager_B);
+
+	std::cout << "\nShow all relations" << std::endl;
+	boss->Display(3);
+
+	std::cout << "\nFire manager A" << std::endl;
+	boss->Remove("Manager A");
+
+	// 智能指针的好处：仅需删除boss，其他全都没了（会把手下的经理，经理手下的员工都析构）。
+	std::cout << "\nThe boss run away." << std::endl;
+	delete boss;
+	getchar();
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -200,5 +232,6 @@ int main()
 	TestTemplate();
 	TestBuilder();
 	TestAppearance();
+	TestComposite();
 	return 0;
 }
