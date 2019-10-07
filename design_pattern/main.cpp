@@ -12,6 +12,7 @@
 #include "protype/protype.h"
 #include "template/my_template.h"
 #include "builder/builder.h"
+#include "appearence/appearance.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -179,6 +180,12 @@ void TestBuilder() {
 
 }
 
+void TestAppearance() {
+	Window windows;
+	windows.ClickButton();
+	getchar();
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -192,5 +199,6 @@ int main()
 	TestRocket();
 	TestTemplate();
 	TestBuilder();
+	TestAppearance();
 	return 0;
 }
