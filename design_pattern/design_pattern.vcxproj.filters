@@ -50,6 +50,9 @@
     <Filter Include="源文件\appearance">
       <UniqueIdentifier>{eda2ad8f-771a-4c54-9a25-a3c91838686e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\composite">
+      <UniqueIdentifier>{6f2723ee-da82-4a58-a6c4-88c84e7f39ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -146,6 +149,9 @@
     </ClInclude>
     <ClInclude Include="appearence\appearance.h">
       <Filter>源文件\appearance</Filter>
+    </ClInclude>
+    <ClInclude Include="composite\composite.h">
+      <Filter>源文件\composite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
