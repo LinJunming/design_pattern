@@ -14,6 +14,7 @@
 #include "builder/builder.h"
 #include "appearence/appearance.h"
 #include "composite/composite.h"
+#include "proxy/proxy.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -218,6 +219,16 @@ void TestComposite() {
 	getchar();
 }
 
+void TestProxy() {
+	// 有一个追求小红的小伙子
+	Suitor suitor("小红");
+	// 有一天他把小红惹生气了，不敢当面道歉
+	// 于是他托了一个好朋友小明（代理）
+	Proxy xiaoming(&suitor);
+	// 让小明去和小红表明小伙子的歉意
+	xiaoming.Apologize();
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -233,5 +244,6 @@ int main()
 	TestBuilder();
 	TestAppearance();
 	TestComposite();
+	TestProxy();
 	return 0;
 }
