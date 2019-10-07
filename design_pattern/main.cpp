@@ -15,6 +15,7 @@
 #include "appearence/appearance.h"
 #include "composite/composite.h"
 #include "proxy/proxy.h"
+#include "decorator/decorator.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -227,6 +228,24 @@ void TestProxy() {
 	Proxy xiaoming(&suitor);
 	// 让小明去和小红表明小伙子的歉意
 	xiaoming.Apologize();
+	std::cout << std::endl;
+}
+
+void TestDecorator() {
+	XiaoMing xiaoming;
+	// 只会一句：
+	xiaoming.ExpressLove();
+	std::cout << std::endl;
+	
+	DecoratorA A_decorated_xiaoming(&xiaoming);
+	// 瞧瞧学会耍嘴皮子的小明能吐出什么象牙来
+	A_decorated_xiaoming.ExpressLove();
+	std::cout << std::endl;
+
+	DecoratorB B_decorated_xiaoming(&A_decorated_xiaoming);
+	// 看看学会现实一点的小明能说出什么承诺来
+	B_decorated_xiaoming.ExpressLove();
+	std::cout << std::endl;
 }
 
 int main()
@@ -245,5 +264,6 @@ int main()
 	TestAppearance();
 	TestComposite();
 	TestProxy();
+	TestDecorator();
 	return 0;
 }
