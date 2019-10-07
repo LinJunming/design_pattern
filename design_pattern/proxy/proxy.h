@@ -2,12 +2,12 @@
 #include <string>
 #include <iostream>
 
-class Man {
+class People {
 public:
 	virtual void Apologize() = 0;
 };
 
-class Suitor : public Man {
+class Suitor : public People {
 public:
 	Suitor(const std::string& name) :m_girl(name) {};
 	void Apologize() {
@@ -17,7 +17,7 @@ private:
 	std::string m_girl;
 };
 
-class Proxy : public Man{
+class Proxy : public People {
 public:
 	Proxy(Suitor* suitor) :m_suitor(suitor) {};
 	void Apologize() {
