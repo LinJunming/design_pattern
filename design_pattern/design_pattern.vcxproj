@@ -159,6 +159,7 @@
     <ClInclude Include="appearence\appearance.h" />
     <ClInclude Include="builder\builder.h" />
     <ClInclude Include="composite\composite.h" />
+    <ClInclude Include="decorator\decorator.h" />
     <ClInclude Include="factory\factory.h" />
     <ClInclude Include="factory\network_product\network_product.h" />
     <ClInclude Include="factory\product_info.h" />

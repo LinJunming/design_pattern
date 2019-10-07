@@ -56,6 +56,9 @@
     <Filter Include="源文件\proxy">
       <UniqueIdentifier>{61098514-428e-4913-9038-972b0314759d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\decorator">
+      <UniqueIdentifier>{a7b54c7d-b390-4b28-b8ea-47e41e07b44a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -158,6 +161,9 @@
     </ClInclude>
     <ClInclude Include="proxy\proxy.h">
       <Filter>源文件\proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="decorator\decorator.h">
+      <Filter>源文件\decorator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
