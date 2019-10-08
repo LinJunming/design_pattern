@@ -16,6 +16,7 @@
 #include "composite/composite.h"
 #include "proxy/proxy.h"
 #include "decorator/decorator.h"
+#include "observer/my_observer.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -248,6 +249,22 @@ void TestDecorator() {
 	std::cout << std::endl;
 }
 
+void TestObserver() {
+	Observer* paid_poster = (Observer *)new PaidPosters();
+	Observer* anti_fans = (Observer *)new AntiFans();
+	Observer* pass_by = (Observer *)new PassBy();
+
+	Star star("GaGa");
+	// “来来来，关注我吧”
+	star.Add(paid_poster);
+	star.Add(anti_fans);
+	star.Add(pass_by);
+	// “大家好，我唱了一首歌曲，在此告知。”
+	star.NotifyAllObservers("唱了一首歌");
+
+	//底层用了智能指针，所以只需要析构Star即可。
+}
+
 int main()
 {
 #ifdef TEST_SIMPLE_FACTORY
@@ -265,5 +282,6 @@ int main()
 	TestComposite();
 	TestProxy();
 	TestDecorator();
+	TestObserver();
 	return 0;
 }
