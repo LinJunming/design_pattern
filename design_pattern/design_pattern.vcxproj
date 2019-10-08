@@ -158,6 +158,7 @@
     <ClInclude Include="adapter\stack.h" />
     <ClInclude Include="appearence\appearance.h" />
     <ClInclude Include="builder\builder.h" />
+    <ClInclude Include="command\command.h" />
     <ClInclude Include="composite\composite.h" />
     <ClInclude Include="decorator\decorator.h" />
     <ClInclude Include="factory\factory.h" />
