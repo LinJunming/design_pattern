@@ -59,6 +59,9 @@
     <Filter Include="源文件\decorator">
       <UniqueIdentifier>{a7b54c7d-b390-4b28-b8ea-47e41e07b44a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\observer">
+      <UniqueIdentifier>{0774620c-ad7b-4d23-9c64-841a6853d5e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -164,6 +167,9 @@
     </ClInclude>
     <ClInclude Include="decorator\decorator.h">
       <Filter>源文件\decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="observer\my_observer.h">
+      <Filter>源文件\observer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
