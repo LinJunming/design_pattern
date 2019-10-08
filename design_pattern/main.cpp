@@ -17,6 +17,7 @@
 #include "proxy/proxy.h"
 #include "decorator/decorator.h"
 #include "observer/my_observer.h"
+#include "command/command.h"
 
 #ifdef TEST_SIMPLE_FACTORY
 // 工厂模式的测试函数
@@ -261,8 +262,25 @@ void TestObserver() {
 	star.Add(pass_by);
 	// “大家好，我唱了一首歌曲，在此告知。”
 	star.NotifyAllObservers("唱了一首歌");
-
 	//底层用了智能指针，所以只需要析构Star即可。
+
+	getchar();
+}
+
+void TestCommand() {
+	CommandWaiter command_waiter;
+	Command *swim = (Command*)new Swim();
+	Command *run = (Command*)new Run();
+
+	command_waiter.Add(swim);
+	command_waiter.Add(run);
+	command_waiter.Notify();
+	//重复下命令，看会不会执行。
+	command_waiter.Notify();
+
+	delete swim;
+	delete run;
+	getchar();
 }
 
 int main()
@@ -283,5 +301,6 @@ int main()
 	TestProxy();
 	TestDecorator();
 	TestObserver();
+	TestCommand();
 	return 0;
 }
